@@ -1,6 +1,6 @@
 # Frontend Mentor - Four card feature section solution
 
-This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). 
+This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK).
 
 ### The challenge
 
@@ -11,7 +11,7 @@ Users should be able to:
 ### Screenshot
 
 ![](./SS_desktop.png)
-![](./SS_desktop.png)
+![](./SS_mobile.png)
 
 ## My process
 
@@ -25,4 +25,3 @@ Users should be able to:
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 - [Styled Components](https://styled-components.com/) - For styles
-
