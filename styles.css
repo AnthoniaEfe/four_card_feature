@@ -4,18 +4,36 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(./assets/fonts/Poppins/Poppins-SemiBold.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
 
 html,
-body {
+body,
+main {
   background-color: hsl(0, 0%, 100%);
   font-family: Poppins, sans-serif;
   color: hsl(228, 12%, 48%);
   font-size: 1rem;
   min-height: 100vh;
   max-width: 100%;
-  margin: 10% 0;
+  margin: 0 auto;
   padding: 1rem;
+  /* display: flex;
+
+  justify-content: center;
+  align-items: center; */
+}
+
+header {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 800px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -29,11 +47,18 @@ h1 {
 }
 
 h2 {
+  font-family: Poppins-SemiBold, sans-serif;
   font-size: 1.5rem;
-  font-weight: 900;
   color: hsl(234, 12%, 34%);
   text-align: center;
   margin: 0;
+}
+
+h3 {
+  font-family: Poppins-SemiBold, sans-serif;
+  margin: 0;
+  font-size: 1.25rem;
+  color: hsl(234, 12%, 34%);
 }
 
 .desc {
@@ -48,55 +73,86 @@ h2 {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 1fr);
   gap: 2rem;
   background-color: inherit;
   padding: 0;
   margin: 3.5rem 0;
+  width: 90%;
+  max-width: 800px;
 }
 
 .grid-item {
   background-color: hsl(0, 0%, 100%);
-  width: 90%;
-  max-width: 800px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  gap: 0.5rem;
   border-radius: 8px;
   margin: auto;
-  padding: 0.75rem;
-  box-shadow: 0px 4px 10px 4px hsl(212, 86%, 64%, 0.25);
+  padding: 1.5rem;
+  box-shadow: 0px 4px 10px 4px hsl(212, 6%, 44%, 0.15);
 }
 
+.grid-item p {
+  margin: 0;
+  font-size: 0.75rem;
+}
 #card1 {
-  border-top: 6px solid hsl(180, 62%, 55%);
+  border-top: 5px solid hsl(180, 62%, 55%);
 }
 #card2 {
-  border-top: 6px solid hsl(0, 78%, 62%);
+  border-top: 5px solid hsl(0, 78%, 62%);
 }
 #card3 {
-  border-top: 6px solid hsl(34, 97%, 64%);
+  border-top: 5px solid hsl(34, 97%, 64%);
 }
 #card4 {
-  border-top: 6px solid hsl(212, 86%, 64%);
+  border-top: 5px solid hsl(212, 86%, 64%);
 }
 
 .card-img {
-  height: 5rem;
-  width: 5rem;
-  align-self: right;
+  height: 4rem;
+  width: 4rem;
+  float: right;
+  margin: 0.5rem 0 0.5rem auto;
 }
 
 @media (min-width: 768px) {
   .grid-container {
     width: 80%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, 1fr);
-    gap: 2rem;
+    column-gap: 2.25rem;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
     background-color: inherit;
     padding: 0;
-    margin: 3.5rem 0;
+    margin: 3.5rem auto;
+  }
+  #card1 {
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+
+  #card4 {
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+
+  .grid-item:nth-child(1) {
+    grid-column: 1;
+  }
+
+  .grid-item:nth-child(2),
+  .grid-item:nth-child(3) {
+    grid-column: 2;
+  }
+
+  .grid-item:nth-child(4) {
+    grid-column: 3;
   }
 }
