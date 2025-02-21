@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/fonts/Poppins/Poppins-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  background-color: hsl(0, 0%, 100%);
+  font-family: Poppins, sans-serif;
+  color: hsl(228, 12%, 48%);
+  font-size: 1rem;
+  min-height: 100vh;
+  max-width: 100%;
+  margin: 10% 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: hsl(212, 6%, 44%);
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: hsl(234, 12%, 34%);
+  text-align: center;
+  margin: 0;
+}
+
+.desc {
+  font-size: 1rem;
+  font-weight: 500;
+  color: hsl(212, 6%, 44%);
+  text-align: justify;
+  margin: 0.75rem 0;
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2rem;
+  background-color: inherit;
+  padding: 0;
+  margin: 3.5rem 0;
+}
+
+.grid-item {
+  background-color: hsl(0, 0%, 100%);
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  border-radius: 8px;
+  margin: auto;
+  padding: 0.75rem;
+  box-shadow: 0px 4px 10px 4px hsl(212, 86%, 64%, 0.25);
+}
+
+#card1 {
+  border-top: 6px solid hsl(180, 62%, 55%);
+}
+#card2 {
+  border-top: 6px solid hsl(0, 78%, 62%);
+}
+#card3 {
+  border-top: 6px solid hsl(34, 97%, 64%);
+}
+#card4 {
+  border-top: 6px solid hsl(212, 86%, 64%);
+}
+
+.card-img {
+  height: 5rem;
+  width: 5rem;
+  align-self: right;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    background-color: inherit;
+    padding: 0;
+    margin: 3.5rem 0;
+  }
+}
