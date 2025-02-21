@@ -10,7 +10,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./SS_desktop.png)
+![](./SS_desktop.png)
 
 ## My process
 
